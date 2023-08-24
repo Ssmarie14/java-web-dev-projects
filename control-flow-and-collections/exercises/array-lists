@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+public static int sumEven(ArrayList<Integer> arr) {
+        int total = 0;
+        for (int integer : arr) {
+        if (integer % 2 == 0) {
+        total += integer;
+        }
+        }
+        return total;
+        }
+        ArrayList<String> cars = new ArrayList<String>();
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+        System.out.println(cars);
+    }
+    if (cars[i] == 5) {
+        System.out.println(cars);
+    }
+}
