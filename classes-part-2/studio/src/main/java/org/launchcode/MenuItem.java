@@ -6,7 +6,7 @@ public class MenuItem {
     private String category;
     private boolean isNew;
 
-    public MenuItem(double p, String d, String c, boolean iN) {
+    public MenuItem (double p, String d, String c, boolean iN) {
         this.price = p;
         this.description = d;
         this.category = c;
@@ -27,6 +27,11 @@ public class MenuItem {
 
     public void setNew(boolean aNew) {
         isNew = aNew;
+    }
+
+    @Override
+    public String toString(){
+        return "Price: " + this.price + "Description: " + this.description;
     }
 }
 

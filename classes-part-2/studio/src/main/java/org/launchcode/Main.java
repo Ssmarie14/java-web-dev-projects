@@ -1,8 +1,9 @@
+
 package org.launchcode;
 
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+        MenuItem burger = new MenuItem(5.00, "Juicy burger", "Entree", false);
     }
 }
