@@ -13,16 +13,18 @@ public class Main {
         //menu item
 
         Menu currentMenu = new Menu(new java.util.Date(), new ArrayList<>());
-    currentMenu.add(burger);
-    currentMenu.add(frenchFries);
-    currentMenu.add(blondieBrownie);
-    currentMenu.add(chipsAndDip);
-    currentMenu.add(soda);
+        currentMenu.add(burger);
+        currentMenu.add(frenchFries);
+        currentMenu.add(blondieBrownie);
+        currentMenu.add(chipsAndDip);
+        currentMenu.add(soda);
+        currentMenu.delete(burger);
 
     //all items added to menu
 
 //        System.out.println(currentMenu.getItems());
 currentMenu.printMenu();
+
         //iterate over the current menu array list
         //for MenuItem : currentMenu.getItems();
         //print out the properties you want

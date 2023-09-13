@@ -36,13 +36,19 @@ public void setLastUpdated(Date lastUpdated) { this.lastUpdated = lastUpdated; }
         items.add(menuItem);
 
     }
+    public void delete(MenuItem menuItem) {
+        items.remove(menuItem);
+    }
     public void printMenu() {
 //        System.out.println(this);
         System.out.println(lastUpdated + "\n");
 //        System.out.println(items);
         for(MenuItem menuItem: items) {
-            System.out.println(menuItem.getDescription()+ " " + menuItem.getPrice()+
-                    " " + menuItem.getCategory()+ " " + menuItem.isNew());
+            printSingleItem(menuItem);
         }
+    }
+    public void printSingleItem(MenuItem menuItem) {
+        System.out.println(menuItem.getDescription()+ " " + menuItem.getPrice()+
+                " " + menuItem.getCategory()+ " " + menuItem.isNew());
     }
 }
