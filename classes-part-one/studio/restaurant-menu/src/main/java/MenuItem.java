@@ -43,9 +43,19 @@ public class MenuItem {
         isNew = aNew;
     }
 
+//    @Override
+//    public String toString() {
+//        return description +
+//                "\n" + price;
+//    }
+
     @Override
     public String toString() {
-        return description +
-                "\n" + price;
+        return "MenuItem{" +
+                "price=" + price +
+                ", description='" + description + '\'' +
+                ", category=" + category +
+                ", isNew=" + isNew +
+                '}';
     }
 }

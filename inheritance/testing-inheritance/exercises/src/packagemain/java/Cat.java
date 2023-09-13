@@ -1,3 +1,5 @@
+package packagemain.java;
+
 public class Cat {
 
     private boolean tired = false;
