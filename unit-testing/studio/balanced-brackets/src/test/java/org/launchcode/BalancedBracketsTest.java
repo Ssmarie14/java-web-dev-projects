@@ -21,7 +21,7 @@ class BalancedBracketsTest {
         assertTrue(org.launchcode.BalancedBrackets.hasBalancedBrackets("[]"));
     }
     @Test
-    public void isBalancedIfMultipleBrackets() {
+    public void isBalancedIfMultipleBracketsReturnsTrue() {
         assertTrue(org.launchcode.BalancedBrackets.hasBalancedBrackets("[[]]"));
     }
     @Test
@@ -29,11 +29,33 @@ class BalancedBracketsTest {
         assertFalse(org.launchcode.BalancedBrackets.hasBalancedBrackets("[]]"));
     }
     @Test
-    public void failsIfBracketsBackwards(){
+    public void failsIfBracketsBackwardsReturnFalse(){
         assertFalse(org.launchcode.BalancedBrackets.hasBalancedBrackets("]["));
     }
 
-    private void assertFalse(boolean b) {
+ @Test
+    public void startsAndEndsWithBracketReturnsTrue() {
+        assertTrue(org.launchcode.BalancedBrackets.hasBalancedBrackets("[LaunchCode]"));
+ }
+    @Test
+    public void bracketsAreInTheMiddleOfStringReturnTrue() {
+        assertTrue(org.launchcode.BalancedBrackets.hasBalancedBrackets("Launch[Code]"));
+    }
+    @Test
+    public void bracketsAreAtTheBeginningOfStringReturnsTrue() {
+        assertTrue(org.launchcode.BalancedBrackets.hasBalancedBrackets("[]LaunchCode"));
+    }
+    @Test
+    public void singleBracketAtBeginningOfStringReturnsFalse() {
+        assertFalse(org.launchcode.BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
+    }
+    @Test
+    public void HasTwoBackwardsBracketsInMiddleOfStringReturnsFalse() {
+        assertFalse(org.launchcode.BalancedBrackets.hasBalancedBrackets("Launch]Code["));
     }
 
-}
+    @Test
+    public void hasSingleBracketReturnFalse() {
+            assertFalse(org.launchcode.BalancedBrackets.hasBalancedBrackets("["));
+        }
+    }
